@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<input type="number" v-model="width"  />
+			<input type="number" v-model="height" />
+			<input type="range"  v-model="r" min="0" max="255"/>
+			<input type="range"  v-model="g" min="0" max="255"/>
+			<input type="range"  v-model="b" min="0" max="255"/>
+
+			<div class="color" v-bind:style="{width:width+'px',height:height+'px',background:'rgb('+r+','+g+','+b+')'}">
+				ew
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	new Vue({
+		el:"#box",
+		data:{
+			msg:"hello",
+			two:"world",
+			flag:true,
+			width:200,
+			height:200,
+			r:0,
+			g:0,
+			b:0,
+			background:"#ccc"
+			
+		}
+		//template:"<p>{{two}}</p>"
+	})
+</script>
